@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- (c) ammap.com | SVG map of South Korea - High -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+	<defs>
+		<style type="text/css">
+			.land
+			{
+				fill: #CCCCCC;
+				fill-opacity: 1;
+				stroke:white;
+				stroke-opacity: 1;
+				stroke-width:0.5;
+			}
+		</style>
+
+		<amcharts:ammap projection="mercator" leftLongitude="125.384458" topLatitude="38.612296" rightLongitude="131.873029" bottomLatitude="33.194027"></amcharts:ammap>
+
+		<!-- All areas are listed in the line below. You can use this list in your script. -->
+		<!--{id:"KR-11"},{id:"KR-26"},{id:"KR-27"},{id:"KR-28"},{id:"KR-29"},{id:"KR-30"},{id:"KR-31"},{id:"KR-41"},{id:"KR-42"},{id:"KR-43"},{id:"KR-44"},{id:"KR-45"},{id:"KR-46"},{id:"KR-47"},{id:"KR-48"},{id:"KR-49"},{id:"KR-50"}-->
+
+	</defs>
+	<g>
+		<path id="KR-27" title="Daegu" class="land" d="M297.124,513.416L296.346,514.417L295.542,517.999L294.465,518.592L292.05,517.701L292.05,517.701L290.53,518.076L290.53,518.076L287.047,520.567L284.639,520.627L284.639,520.627L283.907,517.206L279.858,512.224L280.17,509.422L282.038,510.044L283.595,511.29L285.774,511.29L286.397,508.799L283.284,505.374L284.529,502.26L285.774,499.458L291.068,498.524L290.757,496.655L287.955,494.476L283.284,494.164L283.595,491.051L284.84,488.248L287.02,485.135L289.2,484.512L291.068,483.266L291.69,488.871L294.182,488.871L295.115,485.758L297.607,480.774L303.522,479.53L306.326,476.416L309.75,475.481L312.863,475.793L316.601,478.907L316.601,483.266L317.224,486.379L319.092,490.427L318.158,492.607L314.733,493.853L313.176,497.277L313.176,500.391L310.685,500.703L310.685,502.572L311.931,504.129L311.931,508.177L308.505,509.422L306.948,511.29L304.146,510.978L303.522,508.177L300.409,508.177L298.23,509.422L296.673,511.913z"/>
+	</g>
+</svg>

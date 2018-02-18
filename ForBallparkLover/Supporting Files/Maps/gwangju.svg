@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- (c) ammap.com | SVG map of South Korea - High -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+	<defs>
+		<style type="text/css">
+			.land
+			{
+				fill: #CCCCCC;
+				fill-opacity: 1;
+				stroke:white;
+				stroke-opacity: 1;
+				stroke-width:0.5;
+			}
+		</style>
+
+		<amcharts:ammap projection="mercator" leftLongitude="125.384458" topLatitude="38.612296" rightLongitude="131.873029" bottomLatitude="33.194027"></amcharts:ammap>
+
+		<!-- All areas are listed in the line below. You can use this list in your script. -->
+		<!--{id:"KR-11"},{id:"KR-26"},{id:"KR-27"},{id:"KR-28"},{id:"KR-29"},{id:"KR-30"},{id:"KR-31"},{id:"KR-41"},{id:"KR-42"},{id:"KR-43"},{id:"KR-44"},{id:"KR-45"},{id:"KR-46"},{id:"KR-47"},{id:"KR-48"},{id:"KR-49"},{id:"KR-50"}-->
+
+	</defs>
+	<g>
+		<path id="KR-29" title="Gwangju" class="land" d="M150.742,562.137L148.806,559.802L146.98,558.934L144.547,558.848L142.114,559.802L140.115,560.846L138.117,562.931L136.639,563.018L134.553,562.321L133.076,560.932L132.468,558.76L130.295,558.673L128.209,563.975L125.863,563.888L124.125,565.973L122.995,570.753L123.43,574.837L130.643,575.879L132.468,578.139L134.38,581.963L138.117,581.963L141.506,579.964L145.329,579.964L146.807,578.922L149.935,579.529L153.324,577.183L154.714,575.358L155.497,573.707L155.584,571.1L156.453,569.274L156.453,567.884L154.367,566.929L151.76,566.667z"/>
+	</g>
+</svg>
