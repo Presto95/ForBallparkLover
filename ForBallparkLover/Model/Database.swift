@@ -39,7 +39,7 @@ class Database {
         realm = try! Realm()
         //데이터베이스 하드코딩흐흑
         //테스트케이스
-        addSchedule("0216", opening, samsung, doosan, jamsil, hanwha, nexen, gochuk, lotte, sk, moonhak, kt, kia, gwangju, lg, nc, masan)
+        //addSchedule("0219", opening, samsung, doosan, jamsil, hanwha, nexen, gochuk, lotte, sk, moonhak, kt, kia, gwangju, lg, nc, masan)
         //진짜
         addSchedule("0324", opening, samsung, doosan, jamsil, hanwha, nexen, gochuk, lotte, sk, moonhak, kt, kia, gwangju, lg, nc, masan)
         addSchedule("0325", red, samsung, doosan, jamsil, hanwha, nexen, gochuk, lotte, sk, moonhak, kt, kia, gwangju, lg, nc, masan)

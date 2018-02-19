@@ -29,8 +29,6 @@ class MatchViewController: UIViewController {
     var month: String = ""
     var day: String = ""
     let realm = try! Realm()
-    let url = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData"
-    let key = "9T%2BAzfRxHdmQgQRzNdjInFrGVGfrzmzho%2BVLt4LjUWofQ4Fzr5OExseev2I6zzVcvycPbSRO%2Bs%2FCt5mAvA87uQ%3D%3D"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +72,20 @@ class MatchViewController: UIViewController {
             self.view.backgroundColor = getTeamColor(Team(rawValue: team)!)
             self.reloadDataAtFavoriteTeamChanged()
             self.resetNavigationView()
+            if let defaults = UserDefaults(suiteName: "group.presto.ForBallparkLover"){
+                let favoriteTeam = UserDefaults.standard.string(forKey: "favoriteTeam") ?? "없음"
+                defaults.set(favoriteTeam, forKey: "favoriteTeam")
+                if(self.areas.count == 0){
+                    defaults.set(false, forKey: "isMatchExist")
+                } else {
+                    defaults.set(self.favoriteTeams[0], forKey: "awayTeam")
+                    defaults.set(self.favoriteTeams[1], forKey: "homeTeam")
+                    defaults.set(favoriteTeam, forKey: "favoriteTeam")
+                    defaults.set(self.favoriteAreas[0], forKey: "area")
+                    defaults.set(true, forKey: "isMatchExist")
+                }
+                defaults.synchronize()
+            }
             self.tableView.reloadData()
         }, cancel: { ActionStringCancelBlock  in return }, origin: sender)
     }
@@ -83,6 +95,24 @@ class MatchViewController: UIViewController {
         resetNavigationView()
         reloadSchedule()
         tableView.reloadData()
+        //1. 마이팀 설정 안되었을 때 마이팀 설정 해달라고 하는 문장 표시해야 함
+        //2. 오늘 경기 없을 때 경기가 없다고 위젯에 표시해야함 안그러면 인덱스 넘어가는 오류 뜸
+        if let defaults = UserDefaults(suiteName: "group.presto.ForBallparkLover"){
+            let favoriteTeam = UserDefaults.standard.string(forKey: "favoriteTeam") ?? "없음"
+            if(favoriteTeam == "없음"){
+                defaults.set("없음", forKey: "favoriteTeam")
+            }
+            else if(self.areas.count == 0){
+                defaults.set(false, forKey: "isMatchExist")
+            } else {
+                defaults.set(self.favoriteTeams[0], forKey: "awayTeam")
+                defaults.set(self.favoriteTeams[1], forKey: "homeTeam")
+                defaults.set(favoriteTeam, forKey: "favoriteTeam")
+                defaults.set(self.favoriteAreas[0], forKey: "area")
+                defaults.set(true, forKey: "isMatchExist")
+            }
+            defaults.synchronize()
+        }
     }
     
     func reloadSchedule() {
@@ -328,7 +358,7 @@ extension MatchViewController: DZNEmptyDataSetSource {
         return NSAttributedString(string: "오늘은 경기가 없습니다.", attributes: [NSAttributedStringKey.font : UIFont.boldSystemFont(ofSize: 20)])
     }
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "저도 야구 보고 싶어요😢", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14)])
+        return NSAttributedString(string: "저도 야구 보고 싶어요...😢", attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 14)])
     }
 }
 

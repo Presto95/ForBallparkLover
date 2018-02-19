@@ -24,6 +24,7 @@
 		19740C1A20358B4B0016C70C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19740C1920358B4B0016C70C /* Team.swift */; };
 		19740C1D2035A5E40016C70C /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19740C1C2035A5E40016C70C /* Schedule.swift */; };
 		19740C1F2035A6840016C70C /* AreaPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19740C1E2035A6840016C70C /* AreaPosition.swift */; };
+		19CF5201203ABFEA00087081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 190373182029F9FF00F8DB0C /* Assets.xcassets */; };
 		19EC2A5E20316536006FADB5 /* northChungcheong.svg in Resources */ = {isa = PBXBuildFile; fileRef = 19EC2A4C20316534006FADB5 /* northChungcheong.svg */; };
 		19EC2A5F20316536006FADB5 /* southJeolla.svg in Resources */ = {isa = PBXBuildFile; fileRef = 19EC2A4D20316534006FADB5 /* southJeolla.svg */; };
 		19EC2A6020316536006FADB5 /* incheon.svg in Resources */ = {isa = PBXBuildFile; fileRef = 19EC2A4E20316534006FADB5 /* incheon.svg */; };
@@ -96,6 +97,8 @@
 		19740C1920358B4B0016C70C /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		19740C1C2035A5E40016C70C /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		19740C1E2035A6840016C70C /* AreaPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaPosition.swift; sourceTree = "<group>"; };
+		19ABC24B2039CC2B00941C63 /* ForBallparkLover.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForBallparkLover.entitlements; sourceTree = "<group>"; };
+		19ABC24C2039CC7400941C63 /* ForBallparkLoverWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForBallparkLoverWidget.entitlements; sourceTree = "<group>"; };
 		19EC2A4C20316534006FADB5 /* northChungcheong.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = northChungcheong.svg; sourceTree = "<group>"; };
 		19EC2A4D20316534006FADB5 /* southJeolla.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = southJeolla.svg; sourceTree = "<group>"; };
 		19EC2A4E20316534006FADB5 /* incheon.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = incheon.svg; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 		190373102029F9FF00F8DB0C /* ForBallparkLover */ = {
 			isa = PBXGroup;
 			children = (
+				19ABC24B2039CC2B00941C63 /* ForBallparkLover.entitlements */,
 				190373112029F9FF00F8DB0C /* AppDelegate.swift */,
 				1903731D2029F9FF00F8DB0C /* Info.plist */,
 				19EC2A4720316335006FADB5 /* Model */,
@@ -280,6 +284,7 @@
 		19EC2A7720316D9B006FADB5 /* ForBallparkLoverWidget */ = {
 			isa = PBXGroup;
 			children = (
+				19ABC24C2039CC7400941C63 /* ForBallparkLoverWidget.entitlements */,
 				19EC2A7820316D9B006FADB5 /* TodayViewController.swift */,
 				19EC2A7A20316D9B006FADB5 /* MainInterface.storyboard */,
 				19EC2A7D20316D9B006FADB5 /* Info.plist */,
@@ -376,10 +381,20 @@
 					1903730D2029F9FF00F8DB0C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					19EC2A7320316D9B006FADB5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -440,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19CF5201203ABFEA00087081 /* Assets.xcassets in Resources */,
 				19EC2A7C20316D9B006FADB5 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -693,6 +709,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForBallparkLover/ForBallparkLover.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H79MF628K3;
 				INFOPLIST_FILE = ForBallparkLover/Info.plist;
@@ -711,6 +728,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ForBallparkLover/ForBallparkLover.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H79MF628K3;
 				INFOPLIST_FILE = ForBallparkLover/Info.plist;
@@ -726,6 +744,7 @@
 		19EC2A8120316D9B006FADB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForBallparkLoverWidget/ForBallparkLoverWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H79MF628K3;
 				INFOPLIST_FILE = ForBallparkLoverWidget/Info.plist;
@@ -741,6 +760,7 @@
 		19EC2A8220316D9B006FADB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ForBallparkLoverWidget/ForBallparkLoverWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H79MF628K3;
 				INFOPLIST_FILE = ForBallparkLoverWidget/Info.plist;
